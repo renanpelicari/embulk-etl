@@ -13,6 +13,7 @@ So, do not consider some database normalizations not used properly, even the way
 * [MySQL - Open Source Relational Database](https://www.mysql.com/)
 * [MongoDB - Open Souce Database Oriented by Document](https://www.mongodb.com/)
 * [BASH - Unix Shell to orchestrate the Docker scripts](https://en.wikipedia.org/wiki/Bash_(Unix_shell))
+* [Kotlin Script - To generate random survey](https://kotlinlang.org/docs/tutorials/command-line.html)
 
 ---
 
