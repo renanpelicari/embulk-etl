@@ -2,7 +2,7 @@ CREATE DATABASE db_analysis;
 
 USE db_analysis;
 
-CREATE TABLE t_product_survey(
+CREATE TABLE t_product_price_hist(
   id INT NOT NULL,
   brand_id INT NOT NULL,
   brand VARCHAR(30) NOT NULL,
@@ -10,8 +10,15 @@ CREATE TABLE t_product_survey(
   category VARCHAR(30) NOT NULL,
   product_id INT NOT NULL,
   sku VARCHAR(50) NOT NULL,
-  unit_price FLOAT NOT NULL DEFAULT 0,
+  price FLOAT NOT NULL DEFAULT 0,
+  registered_at DATE NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE t_product_survey(
+  id INT NOT NULL,
   created_at DATE NOT NULL,
+  sku VARCHAR(50) NOT NULL,
   rating INT NOT NULL,
   comment VARCHAR(150) NOT NULL,
   PRIMARY KEY (id)

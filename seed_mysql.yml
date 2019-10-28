@@ -1,0 +1,24 @@
+in:
+  type: mysql
+  host: localhost
+  port: 3306
+  database: db_product
+  schema: public
+  user: root
+  password: pub123
+  query: |
+    SELECT b.id brand_id, b.brand_name brand,
+    c.id category_id, c.category_name category,
+    p.id product_id, p.sku sku, h.price price
+    FROM t_product p INNER JOIN t_brand b ON p.brand_id = b.id
+    INNER JOIN t_category c ON p.category_id = c.id
+    INNER JOIN t_product_price_history h ON p.id = h.product_id;
+out:
+  type: postgresql
+  host: localhost
+  port: 5432
+  database: db_analysis
+  schema: public
+  user: postgres
+  password: pub123
+  table: t_product_price_hist
